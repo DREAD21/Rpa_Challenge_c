@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
+
 
 namespace alpha
 {
@@ -24,7 +24,7 @@ namespace alpha
             string[] Address = new []{"98 North Road", "11 Crown Street", "22 Guild Street", "17 Farburn Terrace", "99 Shire Oak Road", "27 Cheshire Street", "10 Dam Road", "13 White Rabbit Street", "19 Pineapple Boulevard", "87 Orange Street"};
             string[] Email = new []{ "jsmith@itsolutions.co.uk",  "jdorsey@mc.com", "kipling@waterfront.com", "mrobertson@mc.com", "dderrick@timepath.co.uk", "jmarlowe@aperture.us", "shamm@sugarwell.org", "mnorton@aperture.us", "sshelby@techdev.com", "lpalmer@timepath.co.uk" };
             string[] Phone = new []{ "40716543298", "40791345621", "40735416854", "40733652145", "40799885412", "40733154268", "40712462257", "40731254562", "40741785214", "40731653845"};
-            browser = new EdgeDriver();
+            browser = new ChromeDriver();
             browser.Navigate().GoToUrl("https://rpachallenge.com/");
             browser.FindElement(By.XPath("/html/body/app-root/div[2]/app-rpa1/div/div[1]/div[6]/button")).Click();
             IWebElement web = browser.FindElement(By.XPath("/html/body/app-root/div[2]/app-rpa1/div/div[2]/form/input"));
